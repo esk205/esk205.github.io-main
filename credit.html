@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Credit Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Minimum width of 200px per item */
+            gap: 10px;
+            max-height: 80vh; /* Enables scrolling if content overflows */
+            overflow-y: auto;
+            margin: 20px;
+            padding: 10px;
+        }
+        .gallery-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .caption {
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <div> 
+          <img src="images/electric_brain.webp" 
+               alt="Museum of ME logo" 
+               style="max-width: 200px; height: auto;">
+        </div>
+      </a>
+        <div><p>as of 11.1.2024</p></div>
+        <button id="menu-toggle">☰ Menu</button>
+        <nav id="nav-links">
+            <a href="memory.html">Memory and Perception Quirks!</a>
+            <a href="social.html">Social and Behavioral Phenomena!</a>
+            <a href="cognitive.html">Cognitive Biases!</a>
+            <a href="credit.html">Credit</a>
+        </nav>
+        <hr>
+</header>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="images/anchoring_effect.jpg" alt="Sample Image 1">
+        <div class="caption">Image 1 by <a href="https://leonardo.ai/" target="_blank">Website source: AI generated picture (Leonardo AI)</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/bystander_effect.webp" alt="Sample Image 2">
+        <div class="caption">Image 2 by <a href="https://chatgpt.com/" target="_blank">Website source: ChatGPT AI generated picture</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/change_blindness.webp" alt="Sample Image 3">
+        <div class="caption">Image 3 by <a href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRWn7FdlsRn4n7S3S85faFsoAfZ5OykitkM8WOrIQo2RbEBzgbo" target="_blank">Website source: ChatGPT AI Generated</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/cognitive_dissonance.webp" alt="Sample Image 4">
+        <div class="caption">Image 4 by <a href="https://chatgpt.com/" target="_blank">Website source: ChatGPT AI generated picture</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/confirmation bias.webp" alt="Sample Image 5">
+        <div class="caption">Image 5 by <a href="https://www.essentialissues.news/p/the-media-is-making-you-an-extremist" target="_blank">Website source: ChatGPT AI generated</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/electric_brain.webp" alt="Sample Image 7">
+        <div class="caption">Image 7 by <a href="https://chatgpt.com/" target="_blank">Website source: ChatGPT AI generated picture</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/personality_types.webp" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://media.licdn.com/dms/image/v2/D4E22AQGlBMrEmsdEkg/feedshare-shrink_800/feedshare-shrink_800/0/1727353689935?e=1732752000&v=beta&t=EDmHfT8_ga87ZRtKZLsNLhyEEZEAPk0T7ubvyu1_hU4" target="_blank">Website source: https://media.licdn.com/dms/image/v2/D4E22AQGlBMrEmsdEkg/feedshare-shrink_800/feedshare-shrink_800/0/1727353689935?e=1732752000&v=beta&t=EDmHfT8_ga87ZRtKZLsNLhyEEZEAPk0T7ubvyu1_hU4</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/home_page_image.jpg" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRHMjx2jUaRTIf2knTW6F1Y5vc7l8uAS8iRlo8BbDMeflBExA5" target="_blank">Website source: https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTRHMjx2jUaRTIf2knTW6F1Y5vc7l8uAS8iRlo8BbDMeflBExA5</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/mandela_effect.jpg" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMzXXzCnXjXYt5SzaUUMNZSbDMrJD0us_zD_9qI8jcjxh7sw2c" target="_blank">Website source: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMzXXzCnXjXYt5SzaUUMNZSbDMrJD0us_zD_9qI8jcjxh7sw2c</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/placebo_effect.webp" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://www.looniedoctor.ca/category/basic-financial-curriculum/page/2/" target="_blank">Website source: https://www.looniedoctor.ca/category/basic-financial-curriculum/page/2/</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/pygamlion_effect.jpg" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://www.istockphoto.com/vector/note-of-approval-gm484641806-71804949" target="_blank">Website source: https://www.istockphoto.com/vector/note-of-approval-gm484641806-71804949</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/spotlight_effect.jpg" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://www.reddit.com/r/notinteresting/comments/eoao2o/i_am_wearing_two_different_socks_today/" target="_blank">Website source: https://www.reddit.com/r/notinteresting/comments/eoao2o/i_am_wearing_two_different_socks_today/</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/sunken_cost_fallacy.jpg" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://www.healthierforlife.com/library/boredom-the-diet-destroyer" target="_blank">Website source: https://www.healthierforlife.com/library/boredom-the-diet-destroyer</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/halo_effect.jpg" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://www.vectorstock.com/royalty-free-vector/man-with-halo-over-her-head-pop-art-vector-43722229" target="_blank">Website source: https://www.vectorstock.com/royalty-free-vector/man-with-halo-over-her-head-pop-art-vector-43722229</a></div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="images/false_memory.jpg" alt="Sample Image 8">
+        <div class="caption">Image 8 by <a href="https://tenor.com/search/back-in-the-day-gifs" target="_blank">Website source: https://tenor.com/search/back-in-the-day-gifs</a></div>
+    </div>
+</div>
+
+<style>
+    /* CSS Styles for Responsive Design */
+
+    /* Header styles */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        position: relative; /* Position for the absolute nav links */
+        padding: 20px; /* Add some padding */
+    }
+
+    /* Mobile menu */
+    #nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #fff; /* Background color for the menu */
+        position: absolute; /* Position it relative to the header */
+        top: 70px; /* Adjust as necessary */
+        right: 0; /* Align to the right */
+        left: 0; /* Make it extend to the left */
+        margin: 0 auto; /* Center the menu */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        z-index: 1000; /* Ensure it appears above other elements */
+        text-align: center; /* Center text in menu */
+    }
+
+    #nav-links a {
+        padding: 10px; /* Padding for links */
+        text-decoration: none; /* Remove underline */
+        color: #333; /* Text color */
+    }
+
+    #nav-links a:hover {
+        background-color: #f0f0f0; /* Hover effect */
+    }
+
+    @media (min-width: 600px) {
+        #nav-links {
+            display: flex; /* Show links in row for larger screens */
+            position: static; /* Reset position */
+            flex-direction: row; /* Align links horizontally */
+            box-shadow: none; /* Remove shadow */
+            margin: 0; /* Reset margin */
+        }
+        #menu-toggle {
+            display: none; /* Hide button on larger screens */
+        }
+    }
+
+    /* Scroll animation */
+    section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s, transform 1s;
+    }
+    section.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Fridge carousel */
+    .fridge img {
+        display: none;
+    }
+    .fridge img:first-child {
+        display: block;
+    }
+
+    /* Image grid styles */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 10px; /* space between images */
+        max-width: 800px; /* adjust as needed */
+        margin: 20px auto; /* center the grid */
+    }
+    .grid img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease; /* smooth transition */
+    }
+    .grid img:hover {
+        transform: scale(1.1); /* enlarge image on hover */
+    }
+</style>
+
+<footer>
+    <p>&copy; 2024 Image Credit Gallery. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

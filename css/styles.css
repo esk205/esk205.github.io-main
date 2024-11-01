@@ -1,0 +1,178 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu-toggle {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Hide nav-links by default for mobile */
+#nav-links {
+    display: none;
+}
+@media (min-width: 600px) {
+    #nav-links {
+        display: block;
+    }
+    #menu-toggle {
+        display: none;
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: opacity 1s, transform 1s;  /* For scroll animation */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.purple-bkg {
+    background: var(--purple);
+    color: white;
+}
+
+/* Color Variables */
+:root {
+    --purple: #AEB6CB;
+}
+
+/* Image Styles: Consistent Size */
+.image-grid img, 
+.fridge img {
+    width: 150px;        /* Fixed width */
+    height: 150px;       /* Fixed height */
+    object-fit: cover;   /* Ensures image is cropped to fit */
+    border-radius: 8px;  /* Optional: Rounded corners */
+    transition: opacity 0.5s; /* Transition for fading */
+}
+
+/* Grid Layout */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center; /* Centers images in their cells */
+}
+
+/* Scroll Animation: Fade-in Effect */
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Fridge Carousel Images */
+.fridge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fridge img {
+    display: none;
+}
+.fridge img:first-child {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .image-grid img, 
+    .fridge img {
+        width: 120px;     /* Reduced width for mobile */
+        height: 120px;    /* Reduced height for mobile */
+    }
+}
+
+.container {
+    max-width: 800px;
+    width: 90%; /* Ensures good padding on mobile */
+    margin: 20px auto;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognitive/Decision-Making Biases </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .achievement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .achievement:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .achievement img {
+            width: 40%;
+            padding: 20px;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Enlarge and add shadow on hover */
+        .achievement img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .achievement-content {
+            width: 60%;
+            padding: 0 50px;
+        }
+
+        .achievement h2 {
+            margin: 0 0 5px;
+        }
+
+        .achievement p {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <div> 
+          <img src="images/electric_brain.webp" 
+               alt="Museum of ME logo" 
+               style="max-width: 200px; height: auto;">
+        </div>
+      </a>
+      
+      
+    <div><p>as of 11.1.2024</p></div>
+    <button id="menu-toggle">☰ Menu</button>
+    <nav id="nav-links">
+        <a href="memory.html">Memory and Perception Quirks!</a>
+        <a href="social.html">Social and Behavioral Phenomena!</a>
+        <a href="cognitive.html">Cognitive Biases!</a>
+        <a href="credit.html">Credit</a>
+    </nav>
+    <hr>
+</header>
+
+
+
+<div class="container">
+    <div class="achievement">
+        <img src="images/sunken_cost_fallacy.jpg" alt="Sunken Cost Fallacy">
+        <div class="achievement-content">
+            <h2>Sunken Cost Fallacy</h2>
+            <p>The tendency to continue investing in a decision, even when it no longer benefits, just because you've already spent time, money, or effort on it.</p>
+            <p><strong>Example:</strong> Staying in a bad movie because you paid for the ticket.</p>
+        </div>
+    </div>
+
+    <div class="achievement">
+        <img src="images/confirmation bias.webp" alt="Cognitive Dissonance">
+        <div class="achievement-content">
+            <h2>Confirmation Bias</h2>
+            <p>The tendency to search for, interpret, and remember information that confirms existing beliefs, while ignoring evidence that contradicts them.</p>
+            <p><strong>Example:</strong> A person who believes in astrology notices only the times it "predicts" something right.</p>
+        </div>
+    </div>
+
+    <div class="achievement">
+        <img src="images/anchoring_effect.jpg" alt="Halo Effect">
+        <div class="achievement-content">
+            <h2>Anchoring Effect</h2>
+            <p>People rely heavily on the first piece of information (the "anchor") they encounter when making decisions.</p>
+            <p><strong>Example:</strong> A product seems cheaper just because it’s next to something much more expensive.</p>
+        </div>
+    </div>
+
+    <div class="achievement">
+        <img src="images/placebo_effect.webp" alt="Pygmalion Effect">
+        <div class="achievement-content">
+            <h2>Placebo Effect</h2>
+            <p>When a person experiences a perceived benefit from a treatment that has no active ingredients, purely due to the belief that it works.</p>
+            <p><strong>Example:</strong> Feeling better after taking a sugar pill, thinking it’s real medicine.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 My Achievements</p>
+</footer>
+
+<style>
+    /* CSS Styles for Responsive Design */
+
+    /* Header styles */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        position: relative; /* Position for the absolute nav links */
+        padding: 20px; /* Add some padding */
+    }
+
+    /* Mobile menu */
+    #nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #fff; /* Background color for the menu */
+        position: absolute; /* Position it relative to the header */
+        top: 70px; /* Adjust as necessary */
+        right: 0; /* Align to the right */
+        left: 0; /* Make it extend to the left */
+        margin: 0 auto; /* Center the menu */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        z-index: 1000; /* Ensure it appears above other elements */
+        text-align: center; /* Center text in menu */
+    }
+
+    #nav-links a {
+        padding: 10px; /* Padding for links */
+        text-decoration: none; /* Remove underline */
+        color: #333; /* Text color */
+    }
+
+    #nav-links a:hover {
+        background-color: #f0f0f0; /* Hover effect */
+    }
+
+    @media (min-width: 600px) {
+        #nav-links {
+            display: flex; /* Show links in row for larger screens */
+            position: static; /* Reset position */
+            flex-direction: row; /* Align links horizontally */
+            box-shadow: none; /* Remove shadow */
+            margin: 0; /* Reset margin */
+        }
+        #menu-toggle {
+            display: none; /* Hide button on larger screens */
+        }
+    }
+
+    /* Scroll animation */
+    section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s, transform 1s;
+    }
+    section.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Fridge carousel */
+    .fridge img {
+        display: none;
+    }
+    .fridge img:first-child {
+        display: block;
+    }
+
+    /* Image grid styles */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 10px; /* space between images */
+        max-width: 800px; /* adjust as needed */
+        margin: 20px auto; /* center the grid */
+    }
+    .grid img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease; /* smooth transition */
+    }
+    .grid img:hover {
+        transform: scale(1.1); /* enlarge image on hover */
+    }
+</style>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'none' ? 'flex' : 'none';
+    });
+</script>
+
+</body>
+</html>

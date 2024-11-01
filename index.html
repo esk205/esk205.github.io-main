@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psych Facts Homepage</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- 3D Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+    <style>
+        /* CSS Styles for Responsive Design */
+
+        /* Header styles */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            position: relative; /* Position for the absolute nav links */
+            padding: 20px; /* Add some padding */
+        }
+
+        /* Mobile menu */
+        #nav-links {
+            display: none; /* Hidden by default */
+            flex-direction: column; /* Stack links vertically */
+            background-color: #fff; /* Background color for the menu */
+            position: absolute; /* Position it relative to the header */
+            top: 70px; /* Adjust as necessary */
+            right: 0; /* Align to the right */
+            left: 0; /* Make it extend to the left */
+            margin: 0 auto; /* Center the menu */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+            z-index: 1000; /* Ensure it appears above other elements */
+            text-align: center; /* Center text in menu */
+        }
+
+        #nav-links a {
+            padding: 10px; /* Padding for links */
+            text-decoration: none; /* Remove underline */
+            color: #333; /* Text color */
+        }
+
+        #nav-links a:hover {
+            background-color: #f0f0f0; /* Hover effect */
+        }
+
+        @media (min-width: 600px) {
+            #nav-links {
+                display: flex; /* Show links in row for larger screens */
+                position: static; /* Reset position */
+                flex-direction: row; /* Align links horizontally */
+                box-shadow: none; /* Remove shadow */
+                margin: 0; /* Reset margin */
+            }
+            #menu-toggle {
+                display: none; /* Hide button on larger screens */
+            }
+        }
+
+        /* Scroll animation */
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+        section.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Fridge carousel */
+        .fridge img {
+            display: none;
+        }
+        .fridge img:first-child {
+            display: block;
+        }
+
+        /* Image grid styles */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 10px; /* space between images */
+            max-width: 800px; /* adjust as needed */
+            margin: 20px auto; /* center the grid */
+        }
+        .grid img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease; /* smooth transition */
+        }
+        .grid img:hover {
+            transform: scale(1.1); /* enlarge image on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div><img src="images/gear_brain.jpg" alt="Museum of ME logo"></div>
+    <div><p>as of 11.1.2024</p></div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle">☰ Menu</button>
+
+    <!-- Navigation Links -->
+    <nav id="nav-links">
+        <a href="memory.html">Memory and Perception Quirks!</a>
+        <a href="social.html">Social and Behavioral Phenonmena!</a>
+        <a href="cognitive.html">Cognitive Biases!</a>
+        <a href="credit.html">Credit</a>
+    </nav>
+    <hr>
+</header>
+
+<section>
+    <div>
+        <div style="text-align: left;">
+            <p><b>Welcome to the Psych Facts Website!</b></p>
+          </div>
+        <img src="images/home_page_image.jpg" alt="Matthew Avatar" style="max-width: 100%; height: auto;">
+        <p><b>Why chose Psychology as a topic?</b></p>
+        <p>Psychology was chosen simply due to the inspiration from YouTube channels like Psych2Go where the artwork is cartoony and the mood is upbeat and playful.</p>
+    </div>
+</section>
+
+<!-- New Image Grid Section -->
+<section class="purple-bkg">
+    <h2>The MBTI Personality Types!</h2>
+    <div class="grid">
+        <a href="https://www.simplypsychology.org/intj-personality.html">
+            <img src="images/intj_personality_type.jpg" alt="Image 1">
+        </a>
+
+        <a href="https://www.simplypsychology.org/intp-personality.html">
+            <img src="images/intp_personality_type.jpg" alt="Image 2">
+        </a>
+
+        <a href="https://www.simplypsychology.org/entj-personality.html">
+            <img src="images/entj_personality_type.jpg" alt="Image 3">
+        </a>
+
+        <a href="https://www.simplypsychology.org/entp-personality.html">
+            <img src="images/entp_personality_type.jpg" alt="Image 4">
+        </a>
+
+        <a href="https://www.simplypsychology.org/infj-personality.html">
+            <img src="images/infj_personality_type.jpg" alt="Image 5">
+        </a>
+
+        <a href="https://www.simplypsychology.org/infp-personality.html">
+            <img src="images/infp_personality_type.jpg" alt="Image 6">
+        </a>
+
+        <a href="https://www.simplypsychology.org/enfj-personality.html">
+            <img src="images/enfj_personality_type.jpg" alt="Image 7">
+        </a>
+
+        <a href="https://www.simplypsychology.org/enfp-personality.html">
+            <img src="images/enfp_personality_type.jpg" alt="Image 8">
+        </a>
+        
+        <a href="https://www.simplypsychology.org/istj-personality.html">
+            <img src="images/istj_personality_type.jpg" alt="Image 9">
+        </a>
+
+        <a href="https://www.simplypsychology.org/isfj-personality.html">
+            <img src="images/isfj_personality_type.jpg" alt="Image 10">
+        </a>
+
+        <a href="https://www.simplypsychology.org/estj-personality.html">
+            <img src="images/estj_personality_type.jpg" alt="Image 11">
+        </a>
+
+        <a href="https://www.simplypsychology.org/esfj-personality.html">
+            <img src="images/esfj_personality_type.jpg" alt="Image 12">
+        </a>
+        
+        <a href="https://www.simplypsychology.org/istp-personality.html">
+            <img src="images/istp_personality_type.jpg" alt="Image 13">
+        </a>
+
+        <a href="https://www.simplypsychology.org/isfp-personality.html">
+            <img src="images/isfp_personality_type.jpg" alt="Image 14">
+        </a>
+
+        <a href="https://www.simplypsychology.org/estp-personality.html">
+            <img src="images/estp_personality_type.jpg" alt="Image 15">
+        </a>
+
+        <a href="https://www.simplypsychology.org/esfp-personality.html">
+            <img src="images/esfp_personality_type.jpg" alt="Image 16">
+        </a>       
+    </div>
+</section>
+
+<script>
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuButton.addEventListener('click', () => {
+        if (navLinks.style.display === 'block') {
+            navLinks.style.display = 'none'; // Hide menu
+        } else {
+            navLinks.style.display = 'block'; // Show menu
+        }
+    });
+
+    // Scroll Animations for Sections
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Touchscreen Handling for Model Viewer
+    const modelViewer = document.querySelector('model-viewer');
+
+    if ('ontouchstart' in window) {
+        modelViewer.interactionPrompt = 'none';  // Disable interaction prompt on touch devices
+    }
+
+    // Fridge Items Carousel
+    const fridgeImages = document.querySelectorAll('.fridge img');
+    let index = 0;
+
+    function showNextImage() {
+        fridgeImages[index].style.display = 'none';
+        index = (index + 1) % fridgeImages.length;
+        fridgeImages[index].style.display = 'block';
+    }
+
+    setInterval(showNextImage, 3000);  // Change image every 3 seconds
+</script>
+
+</body>
+</html>
